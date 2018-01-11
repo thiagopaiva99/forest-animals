@@ -132,14 +132,16 @@ ul li a.active {
 .item {
 	opacity: 0;
 	visibility: hidden;
-	height: 0;
-	transform: translate3d(0px, -50px, 0px);
+	position: absolute;
+	top: 0;
+	transform: translate3d(-50px, 0px, 0px);
 }
 
 .item.active {
 	opacity: 1;
 	visibility: visible;
-	height: auto;
 	transition: .85s;
+	position: relative;
+	top: auto;
 	transform: translate3d(0px, 0px, 0px);
 }
