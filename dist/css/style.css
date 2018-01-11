@@ -2,6 +2,12 @@
 	box-sizing: border-box;
 }
 
+body {
+	margin: 0px;
+	padding-top: 40px;
+	padding-bottom: 120px;
+}
+
 .container {
 	max-width: 900px;
 	margin: 0 auto;
@@ -144,4 +150,66 @@ ul li a.active {
 	position: relative;
 	top: auto;
 	transform: translate3d(0px, 0px, 0px);
+}
+
+.menu {
+	background: #56CC9D;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+}
+
+.menu nav {
+	text-align: right;
+	padding: 10px 20px 0 0;
+}
+
+.menu nav ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.menu nav li {
+	display: inline-block;
+	text-align: right;
+}
+
+.menu nav li a {
+	display: block;
+	color: white;
+	padding: 15px 20px;
+	text-decoration: none;
+	font-family: monospace;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	float: left;
+}
+
+.menu nav li a::after {
+	content: '';
+	display: block;
+	background: white;
+	height: 2px;
+	width: 0;
+	transition: .3s;
+}
+
+.menu nav li a:hover::after {
+	width: 100%;
+}
+
+.logo {
+	display: block;
+	color: white;
+	width: 200px;
+	padding: 10px 10px 14px 20px;
+	text-decoration: none;
+	font-family: 'Playfair Display';
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 2em;
+	float: left;
 }
