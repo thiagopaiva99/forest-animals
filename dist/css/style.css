@@ -128,3 +128,18 @@ ul li a.active {
 	color: white;
 	border-color: #56CC9D;
 }
+
+.item {
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+	transform: translate3d(0px, -50px, 0px);
+}
+
+.item.active {
+	opacity: 1;
+	visibility: visible;
+	height: auto;
+	transition: .85s;
+	transform: translate3d(0px, 0px, 0px);
+}
