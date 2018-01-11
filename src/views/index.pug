@@ -8,18 +8,18 @@ html(lang="en")
         title Forest Animals
 
     body
-        section.container.animals
+        section(class="container animals", data-group="animals")
             h1 Animais Espirituais
 
             ul.tab-menu
                 li
-                    a(href="#fox") Fox
+                    a(href="#fox", data-click="fox") Fox
                 li
-                    a(href="#firefox") Firefox
+                    a(href="#firefox", data-click="firefox") Firefox
                 li
-                    a(href="#wolf") Wolf
+                    a(href="#wolf", data-click="wolf") Wolf
 
-            div(class="item", id="fox")
+            div(class="item", id="fox", data-target="fox")
                 .item-img
                     img(src="img/fox.jpg", alt="Fox")
                     h2 Fox
@@ -29,7 +29,7 @@ html(lang="en")
                     h3 Habitat
                     p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-            div(class="item", id="firefox")
+            div(class="item", id="firefox", data-target="firefox")
                 .item-img
                     img(src="img/firefox.jpg", alt="Firefox")
                     h2 Firefox
@@ -39,7 +39,7 @@ html(lang="en")
                     h3 Habitat
                     p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-            div(class="item", id="wolf")
+            div(class="item", id="wolf", data-target="wolf")
                 .item-img
                     img(src="img/wolf.jpg", alt="Wolf")
                     h2 Wolf
@@ -49,19 +49,19 @@ html(lang="en")
                     h3 Habitat
                     p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-        section.florestas
+        section(class="florestas", data-group="florestas")
             .container
                 h1 Florestas Termais
 
                 ul.tab-menu
                     li
-                        a(href="#estrada") Estrada
+                        a(href="#estrada", data-click="estrada") Estrada
                     li
-                        a(href="#sol") Sol
+                        a(href="#sol", data-click="sol") Sol
                     li
-                        a(href="#verde") Verde
+                        a(href="#verde", data-click="verde") Verde
 
-                div(class="item", id="estrada")
+                div(class="item", id="estrada", data-target="estrada")
                     .item-img
                         img(src="img/estrada.jpg", alt="Estrada")
                         h2 Estrada
@@ -71,7 +71,7 @@ html(lang="en")
                         h3 Habitat
                         p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-                div(class="item", id="sol")
+                div(class="item", id="sol", data-target="sol")
                     .item-img
                         img(src="img/sol.jpg", alt="Sol")
                         h2 Sol
@@ -81,7 +81,7 @@ html(lang="en")
                         h3 Habitat
                         p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-                div(class="item", id="verde")
+                div(class="item", id="verde", data-target="verde")
                     .item-img
                         img(src="img/verde.jpg", alt="Verde")
                         h2 Verde
