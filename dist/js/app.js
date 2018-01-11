@@ -1,41 +1,21 @@
-$(function(){
-    $('.animals .tab-menu a').first().addClass('active')
-    $('.animals .item').first().addClass('active')
-    
-    $('.animals .tab-menu a').on('click', function(e) {
-        // stop default execution of the link
+$('[data-group]').each(function() {
+    const $allTarget  = $(this).find('[data-target]')
+    const $allClicks  = $(this).find('[data-click]')
+    const activeClass = 'active'
+
+    $allTarget.first().addClass(activeClass)
+    $allClicks.first().addClass(activeClass)
+
+    $allClicks.on('click', function(e) {
         e.preventDefault()
-    
-        // remove active classes from itens
-        $('.animals .tab-menu a, .animals .item').removeClass('active')
-    
-        // get the item id
-        const itemId = $(this).attr('href')
-    
-        // add active class to button clicked
-        $(this).addClass('active')
-    
-        // add active class to the item content
-        $(itemId).addClass('active')
-    })
-    
-    $('.florestas .tab-menu a').first().addClass('active')
-    $('.florestas .item').first().addClass('active')
-    
-    $('.florestas .tab-menu a').on('click', function(e) {
-        // stop default execution of the link
-        e.preventDefault()
-    
-        // remove active classes from itens
-        $('.florestas .tab-menu a, .florestas .item').removeClass('active')
-    
-        // get the item id
-        const itemId = $(this).attr('href')
-    
-        // add active class to button clicked
-        $(this).addClass('active')
-    
-        // add active class to the item content
-        $(itemId).addClass('active')
+
+        const id      = $(this).data('click')
+        const $target = $('[data-target="' +  id + '"]')
+
+        $allClicks.removeClass(activeClass)
+        $allTarget.removeClass(activeClass)
+
+        $target.addClass(activeClass)
+        $(this).addClass(activeClass)
     })
 })
