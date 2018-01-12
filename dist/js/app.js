@@ -31,3 +31,20 @@ $('.menu-nav a[href^="#"').on('click', function(e) {
         scrollTop: targetOffset - menuHeight
     }, 500)
 })
+
+$('section').each(function() {
+    const height     = $(this).height()
+    const offsetTop  = $(this).offset().top
+    const id         = $(this).attr('id')
+    const menuHeight = $('.menu').innerHeight()
+    const $itemMenu  = $('a[href="#' + id + '"]')
+
+    $(window).scroll(function() {
+        const scrollTop = $(window).scrollTop()
+
+        if ( offsetTop - menuHeight < scrollTop && offsetTop + height - menuHeight > scrollTop )
+            $itemMenu.addClass('active')
+        else
+            $itemMenu.removeClass('active')
+    })
+})

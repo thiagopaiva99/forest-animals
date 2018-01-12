@@ -186,6 +186,7 @@ ul li a.active {
 	font-size: 1.3em;
 	letter-spacing: 2px;
 	float: left;
+	border: none;
 }
 
 .menu nav li a::after {
