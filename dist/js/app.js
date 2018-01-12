@@ -54,17 +54,30 @@ $('.mobile-btn').on('click', function() {
     $('.mobile-menu').toggleClass('active')
 })
 
-$('.slide > :first').addClass('active')
+const slider = ( sliderName ) => {
+    const sliderClass = '.' + sliderName
+    const activeClass = 'active'
+    
+    let rotate      = setInterval(rotateSlide, 2000)
 
-const rotateSlide = () => {
-    let activeSlide = $('.slide > .active')
-    let nextSlide   = activeSlide.next()
+    $(sliderClass + ' > :first').addClass(activeClass)
 
-    if( nextSlide.length == 0 )
-        nextSlide = $('.slide > :first')
+    $(sliderClass).hover(function() {
+        clearInterval(rotate)
+    }, function() {
+        rotate      = setInterval(rotateSlide, 2000)
+    })
 
-        activeSlide.removeClass('active')
-        nextSlide.addClass('active')
+    function rotateSlide() {
+        let activeSlide = $(sliderClass + ' > .' + activeClass)
+        let nextSlide   = activeSlide.next()
+
+        if( nextSlide.length == 0 )
+            nextSlide = $(sliderClass + ' > :first')
+
+            activeSlide.removeClass(activeClass)
+            nextSlide.addClass(activeClass)
+    }
 }
 
-setInterval(rotateSlide, 2000)
+slider('introducao')
