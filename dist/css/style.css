@@ -197,7 +197,7 @@ ul li a.active {
 	transition: .3s;
 }
 
-.menu nav li a:hover::after {
+.menu nav li a:hover::after, .menu nav li a.active::after {
 	width: 100%;
 }
 
