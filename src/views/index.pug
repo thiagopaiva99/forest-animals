@@ -13,13 +13,13 @@ html(lang="en")
             nav
                 ul
                     li
-                        a(href="#animais") Animais
+                        a(href="#animals") Animais
                     li
                         a(href="#florestas") Florestas
                     li
                         a(href="#montanhas") Montanhas
 
-        section(class="container animals", data-group="animals")
+        section(class="container animals", data-group="animals", id="animals")
             h1 Animais Espirituais
 
             ul.tab-menu
@@ -60,7 +60,7 @@ html(lang="en")
                     h3 Habitat
                     p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
-        section(class="florestas", data-group="florestas")
+        section(class="florestas", data-group="florestas", id="florestas")
             .container
                 h1 Florestas Termais
 
@@ -101,6 +101,47 @@ html(lang="en")
                         p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
                         h3 Habitat
                         p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+
+        section(class="container montanhas", data-group="montanhas", id="montanhas")
+            h1 Montanhas da Alma
+
+            ul.tab-menu
+                li
+                    a(href="#pico", data-click="pico") Pico
+                li
+                    a(href="#montanha", data-click="montanha") Montanha
+                li
+                    a(href="#monte", data-click="monte") Monte
+
+            div(class="item", id="pico", data-target="pico")
+                .item-img
+                    img(src="img/pico.jpg", alt="Pico")
+                    h2 Pico
+                .item-info
+                    h3 Características
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+                    h3 Habitat
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+
+            div(class="item", id="montanha", data-target="montanha")
+                .item-img
+                    img(src="img/montanha.jpg", alt="Montanha")
+                    h2 Montanha
+                .item-info
+                    h3 Características
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+                    h3 Habitat
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+
+            div(class="item", id="monte", data-target="monte")
+                .item-img
+                    img(src="img/monte.jpg", alt="Monte")
+                    h2 Monte
+                .item-info
+                    h3 Características
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
+                    h3 Habitat
+                    p Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das formas de ação.
 
         script(src="js/jquery.js", type="text/javascript")
         script(src="js/app.js", type="text/javascript")
