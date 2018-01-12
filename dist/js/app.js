@@ -19,3 +19,15 @@ $('[data-group]').each(function() {
         $(this).addClass(activeClass)
     })
 })
+
+$('.menu-nav a[href^="#"').on('click', function(e) {
+    e.preventDefault()
+
+    const id           = $(this).attr('href')
+    const targetOffset = $(id).offset().top
+    const menuHeight   = $(".menu").height()
+
+    $('html, body').animate({
+        scrollTop: targetOffset - menuHeight
+    }, 500)
+})
