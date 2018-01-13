@@ -83,3 +83,25 @@ const slider = ( sliderName ) => {
 slider('introducao')
 
 // scroll animation
+const $target        = $('[data-anime="scroll"]')
+const animationClass = 'animate'
+const offset         = $(window).height() * 3/4
+
+const animaScroll = () => {
+    const documentTop = $(window).scrollTop()
+    
+    $target.each(function() {
+        const itemTop = $(this).offset().top
+
+        if ( documentTop > itemTop - offset ) 
+            $(this).addClass(animationClass)
+        else
+            $(this).removeClass(animationClass)
+    })
+}
+
+animaScroll()
+
+$(document).scroll(function() {
+    animaScroll()
+})
