@@ -81,3 +81,5 @@ const slider = ( sliderName ) => {
 }
 
 slider('introducao')
+
+// scroll animation
