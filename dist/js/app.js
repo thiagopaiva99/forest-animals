@@ -1,4 +1,30 @@
 (function () {
+    // lodash debounce
+    debounce = (func, wait, immediate) => {
+        let timeout
+
+        return function() {
+            let context = this
+            let args    = arguments
+
+            let later = () => {
+                timeout = null
+                
+                if ( !immediate ) 
+                    func.apply(context, args)
+            }
+
+            let callNow = immediate && !timeout
+
+            clearTimeout(timeout)
+
+            timeout = setTimeout(later, wait)
+            
+            if (callNow) 
+                func.apply(context, args)
+        }
+    }
+
     $('[data-group]').each(function () {
         const $allTarget = $(this).find('[data-target]')
         const $allClicks = $(this).find('[data-click]')
